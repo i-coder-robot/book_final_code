@@ -1,0 +1,11 @@
+runmode: debug               # 开发模式, debug, release, test
+addr: :9090                  # HTTP绑定端口
+url: http://127.0.0.1:9090   # pingServer函数请求的API服务器的ip:port
+max_check_count: 10           # pingServer函数尝试的次数
+database:
+  name: db
+  addr: 127.0.0.1:3306
+  username: root
+  password: smartwell
+wx_app_id: 123
+wx_secret: 123
