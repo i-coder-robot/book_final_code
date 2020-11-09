@@ -3,6 +3,10 @@ package main
 import (
 	"flag"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
+	"github.com/i-coder-robot/book_final_code/Chapter16/config"
+	"github.com/i-coder-robot/book_final_code/Chapter16/middleware"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 	"github.com/spf13/viper"
 	"log"
 	"net/http"
@@ -15,12 +19,11 @@ var (
 func main() {
 	flag.Parse()
 
-	// init config
-	//if err := config.Init(*cfg); err != nil {
-	//	panic(err)
-	//}
-	//model.DB.Init()
-	//defer model.DB.Close()
+	if err := config.Init(*cfg); err != nil {
+		panic(err)
+	}
+	model.DB.Init()
+	defer model.DB.Close()
 	r := gin.New()
 	Load(
 		r,

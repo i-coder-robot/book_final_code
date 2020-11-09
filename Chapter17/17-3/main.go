@@ -1,7 +1,7 @@
 package main
 
 import (
-	MyLog "book-code/Chapter13/17-3/MyLog"
+	"github.com/i-coder-robot/book_final_code/Chapter17/17-3/MyLog"
 )
 
 func main() {
