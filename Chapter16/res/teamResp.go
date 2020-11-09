@@ -1,6 +1,6 @@
 package res
 
-import "book-code/Chapter13/13-4/model"
+import "github.com/i-coder-robot/book_final_code/Chapter16/model"
 
 type TeamResp struct {
 	model.TeamDetail

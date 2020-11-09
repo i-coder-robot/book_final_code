@@ -1,16 +1,16 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/handler/param"
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
 	"errors"
 	"github.com/hashicorp/go-uuid"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler/param"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
 )
 
 type PostTeamOrderService struct {
 	TeamRepo *repository.TeamRepo
-	Repo *repository.TeamPostOrderRepo
+	Repo     *repository.TeamPostOrderRepo
 }
 
 func (t *PostTeamOrderService) PostTeamOrder(order param.TeamPostOrder) (string, error) {

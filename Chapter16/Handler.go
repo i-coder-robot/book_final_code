@@ -1,14 +1,14 @@
 package main
 
 import (
-	"book-code/Chapter13/13-4/conf"
-	"book-code/Chapter13/13-4/config"
-	"book-code/Chapter13/13-4/handler"
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
-	"book-code/Chapter13/13-4/service"
-	"book-code/Chapter13/13-4/service/dp_service"
 	"fmt"
+	"github.com/i-coder-robot/book_final_code/Chapter16/conf"
+	"github.com/i-coder-robot/book_final_code/Chapter16/config"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
+	"github.com/i-coder-robot/book_final_code/Chapter16/service"
+	"github.com/i-coder-robot/book_final_code/Chapter16/service/dp_service"
 	"github.com/jinzhu/gorm"
 	"github.com/spf13/viper"
 	"log"

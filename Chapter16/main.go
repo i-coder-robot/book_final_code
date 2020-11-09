@@ -1,8 +1,6 @@
 package main
 
 import (
-	"book-code/Chapter13/13-3/MyLog"
-	"book-code/Chapter13/13-4/middleware"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
@@ -29,7 +27,7 @@ func main() {
 		middleware.ProcessTraceID(),
 		middleware.Logging(),
 	)
-	port:=viper.GetString("addr")
+	port := viper.GetString("addr")
 	MyLog.Log.Info("开始监听http地址", port)
 	log.Printf(http.ListenAndServe(port, r).Error())
 }

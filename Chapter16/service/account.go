@@ -1,9 +1,9 @@
 package service
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
 	"errors"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
 )
 
 type AccountService struct {
@@ -61,7 +61,7 @@ func (ac *AccountService) UpdateAccount(account model.Account) error {
 	if err != nil {
 		return err
 	}
-	if accountInfo.AccountId=="" {
+	if accountInfo.AccountId == "" {
 		return errors.New("用户不存在")
 	}
 	return ac.Repo.UpdateAccount(account)

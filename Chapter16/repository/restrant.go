@@ -1,6 +1,6 @@
 package repository
 
-import "book-code/Chapter13/13-4/model"
+import "github.com/i-coder-robot/book_final_code/Chapter16/model"
 
 type RestaurantNavRepo struct {
 	DB model.DataBase
@@ -8,7 +8,7 @@ type RestaurantNavRepo struct {
 
 func (r *RestaurantNavRepo) ListRestaurantNav(level int) []model.RestaurantNav {
 	var items []model.RestaurantNav
-	model.DB.MyDB.Where("level=?",level).Find(&items)
+	model.DB.MyDB.Where("level=?", level).Find(&items)
 	return items
 }
 
@@ -24,8 +24,6 @@ func (r *RestaurantTabItemRepo) ListGoodRestaurantTabItem() []model.RestaurantTa
 
 func (r *RestaurantTabItemRepo) ListRestaurantNav(level int) []model.RestaurantNav {
 	var items []model.RestaurantNav
-	r.DB.MyDB.Where("level=?",level).Find(&items)
+	r.DB.MyDB.Where("level=?", level).Find(&items)
 	return items
 }
-
-

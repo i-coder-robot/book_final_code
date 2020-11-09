@@ -1,10 +1,10 @@
 package wx_service
 
 import (
-	"book-code/Chapter13/13-4/res"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/i-coder-robot/book_final_code/Chapter16/res"
 	"github.com/spf13/viper"
 	"net/http"
 )
@@ -16,9 +16,8 @@ func WXLogin(code string) (*res.WXLoginResponse, error) {
 	// 这里的appId和secret是在微信公众平台上获取的
 	url = fmt.Sprintf(url, viper.GetString("wx_app_id"), viper.GetString("wx_secret"), code)
 
-
 	// 创建http get请求
-	resp,err := http.Get(url)
+	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
 	}
@@ -38,4 +37,3 @@ func WXLogin(code string) (*res.WXLoginResponse, error) {
 
 	return &wxResp, nil
 }
-

@@ -1,6 +1,6 @@
 package repository
 
-import "book-code/Chapter13/13-4/model"
+import "github.com/i-coder-robot/book_final_code/Chapter16/model"
 
 type CommentRepo struct {
 	DB model.DataBase
@@ -8,6 +8,6 @@ type CommentRepo struct {
 
 func (c *CommentRepo) GetCommentList(hotelId string) []model.Comment {
 	var commentList []model.Comment
-	c.DB.MyDB.Where("hotel_id=?",hotelId).Find(&commentList)
+	c.DB.MyDB.Where("hotel_id=?", hotelId).Find(&commentList)
 	return commentList
 }

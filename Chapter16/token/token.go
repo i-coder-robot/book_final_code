@@ -1,10 +1,10 @@
 package token
 
 import (
-	"book-code/Chapter13/13-4/myerr"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
 	"github.com/spf13/viper"
 	"time"
 )

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"book-code/Chapter13/13-4/handler"
-	"book-code/Chapter13/13-4/health"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler"
+	"github.com/i-coder-robot/book_final_code/Chapter16/health"
 	"net/http"
 )
 
@@ -62,13 +62,13 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 		//获取餐馆详细信息
 		dp.GET("/hotel/detail/:id", HotelDetailHandler.HotelDetailHandler)
 		//获取团购详细信息
-		dp.GET("/team/detail/:id",TeamDetailHandler.TeamDetailHandler)
+		dp.GET("/team/detail/:id", TeamDetailHandler.TeamDetailHandler)
 		//团购下单
-		dp.POST("/team/order/:id",PostTeamOrderHandler.TeamOrderHandler)
+		dp.POST("/team/order/:id", PostTeamOrderHandler.TeamOrderHandler)
 		//订座下单
-		dp.POST("/seat/order/:hotelId",OrderSeatHandler.OrderSeat)
+		dp.POST("/seat/order/:hotelId", OrderSeatHandler.OrderSeat)
 		//外卖
-		dp.GET("/takeout/:hotelId",TakeOutHandler.GetTakeOutByHotelId)
+		dp.GET("/takeout/:hotelId", TakeOutHandler.GetTakeOutByHotelId)
 		//我的
 		dp.GET("/me", MeHandler.Me)
 

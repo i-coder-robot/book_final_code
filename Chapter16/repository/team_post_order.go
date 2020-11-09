@@ -1,9 +1,8 @@
 package repository
 
 import (
-	"book-code/Chapter13/13-4/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 )
-
 
 type TeamPostOrderRepo struct {
 	DB model.DataBase

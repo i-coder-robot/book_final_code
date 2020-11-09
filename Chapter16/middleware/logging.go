@@ -1,38 +1,36 @@
 package middleware
 
 import (
-	"book-code/Chapter13/13-3/MyLog"
-	"book-code/Chapter13/13-4/model/log"
-	"book-code/Chapter13/13-4/myerr"
-	"book-code/Chapter13/13-4/res"
 	"bytes"
 	"encoding/json"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model/log"
+	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
+	"github.com/i-coder-robot/book_final_code/Chapter16/res"
 	"github.com/willf/pad"
 	"io/ioutil"
 	"time"
 )
 
-
-
 func Logging() gin.HandlerFunc {
 	return func(context *gin.Context) {
-		start :=time.Now().UTC()
+		start := time.Now().UTC()
 		path := context.Request.URL.Path
 
 		var bodies []byte
-		if context.Request.Body!=nil{
+		if context.Request.Body != nil {
 			bodies, _ = ioutil.ReadAll(context.Request.Body)
 		}
-		context.Request.Body=ioutil.NopCloser(bytes.NewBuffer(bodies))
-		method:=context.Request.Method
-		ip:=context.ClientIP()
+		context.Request.Body = ioutil.NopCloser(bytes.NewBuffer(bodies))
+		method := context.Request.Method
+		ip := context.ClientIP()
 
 		blw := &log.BodyLoggerWriter{
 			ResponseWriter: context.Writer,
 			Body:           bytes.NewBufferString(""),
 		}
-		context.Writer=blw
+		context.Writer = blw
 
 		context.Next()
 
@@ -41,9 +39,9 @@ func Logging() gin.HandlerFunc {
 		code := -100
 		message := ""
 		var response res.Response
-		if err:= json.Unmarshal(blw.Body.Bytes(),&response);err!=nil{
+		if err := json.Unmarshal(blw.Body.Bytes(), &response); err != nil {
 			code = myerr.InternalServerError.Code
-			message=err.Error()
+			message = err.Error()
 			MyLog.Log.Error(err)
 		} else {
 			code = response.Code

@@ -1,8 +1,8 @@
 package model
 
 import (
-	MyLog "book-code/Chapter13/13-3/MyLog"
 	"fmt"
+	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
 	"github.com/jinzhu/gorm"
 	// MySQL driver.
 	_ "github.com/jinzhu/gorm/dialects/mysql"

@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"book-code/Chapter13/13-4/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 )
 
 type ListNavItemRepo struct {
@@ -10,6 +10,6 @@ type ListNavItemRepo struct {
 
 func (i *ListNavItemRepo) ListNavItems(level int) []model.Nav {
 	var items []model.Nav
-	i.DB.MyDB.Where("level=?",level).Find(&items)
+	i.DB.MyDB.Where("level=?", level).Find(&items)
 	return items
 }

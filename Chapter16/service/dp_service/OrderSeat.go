@@ -1,10 +1,10 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/handler/param"
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
 	"github.com/hashicorp/go-uuid"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler/param"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
 )
 
 type OrderSeatService struct {

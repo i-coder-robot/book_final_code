@@ -1,15 +1,15 @@
 package res
 
 import (
-	"book-code/Chapter13/13-4/myerr"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
 	"net/http"
 )
 
 type Response struct {
-	Code int `json:"code"`
-	Message string `json:"message"`
-	Data interface{} `json:"data"`
+	Code    int         `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
 }
 
 func SendResponse(c *gin.Context, err error, data interface{}) {

@@ -1,8 +1,8 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
 )
 
 type MarketService struct {
@@ -11,6 +11,6 @@ type MarketService struct {
 
 func (m *MarketService) GetMarketInfo(hotelId string) model.Market {
 	var market model.Market
-	m.Repo.DB.MyDB.Where("hotel_id=?",hotelId).Find(&market)
+	m.Repo.DB.MyDB.Where("hotel_id=?", hotelId).Find(&market)
 	return market
 }

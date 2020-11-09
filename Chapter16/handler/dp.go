@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"book-code/Chapter13/13-4/handler/param"
-	"book-code/Chapter13/13-4/service/dp_service"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler/param"
+	"github.com/i-coder-robot/book_final_code/Chapter16/service/dp_service"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -85,16 +85,16 @@ func (h *RestaurantNavHandler) GoodRestaurantTabItemHandler(c *gin.Context) {
 func (h *HotelDetailHandler) HotelDetailHandler(c *gin.Context) {
 	hotelId := c.Param("id")
 
-	hotel,err := h.Srv.GetHotelDetailByID(hotelId)
-	if err!=nil{
+	hotel, err := h.Srv.GetHotelDetailByID(hotelId)
+	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"item": nil,
-			"msg": err.Error(),
+			"msg":  err.Error(),
 		})
-	}else{
+	} else {
 		c.JSON(http.StatusOK, gin.H{
 			"item": hotel,
-			"msg":"",
+			"msg":  "",
 		})
 	}
 }
@@ -116,13 +116,13 @@ func (h *PostTeamOrderHandler) TeamOrderHandler(c *gin.Context) {
 			"err": err.Error(),
 		})
 	}
-	id,err := h.Srv.PostTeamOrder(p)
-	if err!=nil{
+	id, err := h.Srv.PostTeamOrder(p)
+	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"id":  "",
 			"err": err.Error(),
 		})
-	}else{
+	} else {
 		c.JSON(http.StatusOK, gin.H{
 			"id":  id,
 			"err": "",
@@ -183,7 +183,6 @@ func (h *SuggestFoodHandler) RushHandler(c *gin.Context) {
 	items := h.Srv.ListSuggestList(2)
 	c.JSON(http.StatusOK, gin.H{"item": items})
 }
-
 
 func (h *GuessHandler) Guess(c *gin.Context) {
 	items := h.Srv.ListGuess()

@@ -1,22 +1,21 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
 )
 
 type RestaurantService struct {
-	Repo *repository.RestaurantNavRepo
+	Repo     *repository.RestaurantNavRepo
 	ItemRepo *repository.RestaurantTabItemRepo
 }
 
 func (r *RestaurantService) ListRestaurantNav(level int) []model.RestaurantNav {
-	items:= r.Repo.ListRestaurantNav(level)
+	items := r.Repo.ListRestaurantNav(level)
 	return items
 }
 
 func (r *RestaurantService) ListGoodRestaurantTabItem() []model.RestaurantTabItem {
-	items:= r.ItemRepo.ListGoodRestaurantTabItem()
+	items := r.ItemRepo.ListGoodRestaurantTabItem()
 	return items
 }
-

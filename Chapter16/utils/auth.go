@@ -1,9 +1,9 @@
 package utils
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/myerr"
 	"github.com/go-playground/validator/v10"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -24,7 +24,7 @@ func Validate(m model.Account) error {
 	return validate.Struct(m)
 }
 
-func CheckParam(accountName,password string) myerr.Err {
+func CheckParam(accountName, password string) myerr.Err {
 	if accountName == "" {
 		return myerr.New(*myerr.ErrValidation, nil).Add("用户名为空.")
 	}
@@ -34,4 +34,3 @@ func CheckParam(accountName,password string) myerr.Err {
 	}
 	return myerr.Err{ErrNum: *myerr.PassParamCheck, Err: nil}
 }
-

@@ -1,6 +1,6 @@
 package repository
 
-import "book-code/Chapter13/13-4/model"
+import "github.com/i-coder-robot/book_final_code/Chapter16/model"
 
 type SuggestRepo struct {
 	DB model.DataBase

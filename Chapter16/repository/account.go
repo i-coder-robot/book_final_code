@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/utils"
 	"fmt"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/utils"
 )
 
 type AccountModelRepo struct {
@@ -30,9 +30,9 @@ func (m *AccountModelRepo) DeleteAccount(id string) error {
 
 // 更新 account.
 func (m *AccountModelRepo) UpdateAccount(account model.Account) error {
-	err:= m.DB.MyDB.Model(model.Account{}).Where("account_id=?",account.AccountId).Updates(map[string]interface{}{
-		"account_name":account.AccountName,
-		"account_password":account.Password,
+	err := m.DB.MyDB.Model(model.Account{}).Where("account_id=?", account.AccountId).Updates(map[string]interface{}{
+		"account_name":     account.AccountName,
+		"account_password": account.Password,
 	}).Error
 	return err
 }
@@ -42,13 +42,13 @@ func (m *AccountModelRepo) GetAccountByName(name string) (model.Account, error) 
 	var account model.Account
 	err := m.DB.MyDB.Where("account_name = ?", name).First(&account).Error
 	if err != nil {
-		return account,err
+		return account, err
 	}
 	return account, nil
 }
 
 // Account列表
-func (m *AccountModelRepo)  ListAccount(offset, limit int) ([]*model.Account, uint64, error) {
+func (m *AccountModelRepo) ListAccount(offset, limit int) ([]*model.Account, uint64, error) {
 
 	accounts := make([]*model.Account, 0)
 	var count uint64
@@ -57,14 +57,14 @@ func (m *AccountModelRepo)  ListAccount(offset, limit int) ([]*model.Account, ui
 		return nil, 0, err
 	}
 
-	err := m.DB.MyDB.Model(&model.Account{}).Limit(limit).Offset(offset).Order("id desc").Find(&accounts).Error;
+	err := m.DB.MyDB.Model(&model.Account{}).Limit(limit).Offset(offset).Order("id desc").Find(&accounts).Error
 	if err != nil {
 		return nil, count, err
 	}
 	return accounts, count, nil
 }
 
-func  (m *AccountModelRepo) ListAccountByName(account_name string, offset, limit int) ([]*model.Account, uint64, error) {
+func (m *AccountModelRepo) ListAccountByName(account_name string, offset, limit int) ([]*model.Account, uint64, error) {
 	if limit == 0 {
 		limit = utils.Limit
 	}
@@ -83,9 +83,9 @@ func  (m *AccountModelRepo) ListAccountByName(account_name string, offset, limit
 	return accounts, count, nil
 }
 
-func  (m *AccountModelRepo) GetAccountInfo(accountId string) (model.Account, error) {
+func (m *AccountModelRepo) GetAccountInfo(accountId string) (model.Account, error) {
 	var account model.Account
-	if err := m.DB.MyDB.Where("account_id=?",accountId).First(&account).Error; err != nil {
+	if err := m.DB.MyDB.Where("account_id=?", accountId).First(&account).Error; err != nil {
 		return account, err
 	}
 	return account, nil

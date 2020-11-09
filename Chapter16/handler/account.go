@@ -1,19 +1,19 @@
 package handler
 
 import (
-	"book-code/Chapter13/13-3/MyLog"
-	"book-code/Chapter13/13-4/handler/param"
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/model/my_token"
-	"book-code/Chapter13/13-4/myerr"
-	"book-code/Chapter13/13-4/res"
-	"book-code/Chapter13/13-4/service"
-	"book-code/Chapter13/13-4/service/wx_service"
-	"book-code/Chapter13/13-4/token"
-	"book-code/Chapter13/13-4/utils"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"github.com/hashicorp/go-uuid"
+	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
+	"github.com/i-coder-robot/book_final_code/Chapter16/handler/param"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model/my_token"
+	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
+	"github.com/i-coder-robot/book_final_code/Chapter16/res"
+	"github.com/i-coder-robot/book_final_code/Chapter16/service"
+	"github.com/i-coder-robot/book_final_code/Chapter16/service/wx_service"
+	"github.com/i-coder-robot/book_final_code/Chapter16/token"
+	"github.com/i-coder-robot/book_final_code/Chapter16/utils"
 )
 
 type AccountHandler struct {
@@ -28,7 +28,7 @@ func (h *AccountHandler) AccountCreate(c *gin.Context) {
 		return
 	}
 
-	if err := utils.CheckParam(r.AccountName,r.Password); err.Err != nil {
+	if err := utils.CheckParam(r.AccountName, r.Password); err.Err != nil {
 		res.SendResponse(c, err.Err, nil)
 		return
 	}
@@ -43,19 +43,19 @@ func (h *AccountHandler) AccountCreate(c *gin.Context) {
 	MyLog.Log.Infof("Header Content-Type: %s", contentType)
 
 	// 把明文密码加密
-	md5Pwd,err := utils.Encrypt(r.Password)
+	md5Pwd, err := utils.Encrypt(r.Password)
 	if err != nil {
 		res.SendResponse(c, myerr.ErrEncrypt, nil)
 		return
 	}
-	id ,err := uuid.GenerateUUID()
-	if err!=nil{
+	id, err := uuid.GenerateUUID()
+	if err != nil {
 		res.SendResponse(c, myerr.InternalServerError, nil)
 		return
 	}
 	// 添加用户到数据库
-	a :=model.Account{
-		AccountId: id,
+	a := model.Account{
+		AccountId:   id,
 		AccountName: r.AccountName,
 		Password:    md5Pwd,
 	}
@@ -128,12 +128,12 @@ func (h *AccountHandler) Update(c *gin.Context) {
 	m.AccountId = c.Param("id")
 
 	// 密码加密处理.
-	md5Pwd,err := utils.Encrypt(m.Password)
+	md5Pwd, err := utils.Encrypt(m.Password)
 	if err != nil {
 		res.SendResponse(c, myerr.ErrEncrypt, nil)
 		return
 	}
-	m.Password=md5Pwd
+	m.Password = md5Pwd
 	// 保存更新.
 	if err := h.Srv.UpdateAccount(m); err != nil {
 		res.SendResponse(c, myerr.ErrDatabase, nil)
@@ -179,9 +179,9 @@ func (h *AccountHandler) Login(c *gin.Context) {
 
 // 微信小程序登录
 func (h *AccountHandler) WXLogin(c *gin.Context) {
-	code := c.Query("code")     //  获取code
+	code := c.Query("code") //  获取code
 	// 根据code获取 openID 和 session_key
-	wxLoginResp,err := wx_service.WXLogin(code)
+	wxLoginResp, err := wx_service.WXLogin(code)
 	if err != nil {
 		res.SendResponse(c, nil, nil)
 		return
@@ -189,7 +189,7 @@ func (h *AccountHandler) WXLogin(c *gin.Context) {
 	// 保存登录态
 	session := sessions.Default(c)
 	session.Set("openid", wxLoginResp.OpenId)
-	session.Set("sessionKey", wxLoginResp.SessionKey )
+	session.Set("sessionKey", wxLoginResp.SessionKey)
 
 	// 这里可以用openid和sessionkey的串接,或者使用你自己的规则进行拼接,然后进行MD5之后作为该用户的自定义登录态， 要保证mySession唯一,
 	mySession := utils.GetMD5Encode(wxLoginResp.OpenId + wxLoginResp.SessionKey)

@@ -1,9 +1,9 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
-	"book-code/Chapter13/13-4/res"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
+	"github.com/i-coder-robot/book_final_code/Chapter16/res"
 )
 
 type TakeOutService struct {
@@ -12,7 +12,7 @@ type TakeOutService struct {
 
 func Convert2HotelFoodCategoryResp(c model.HotelFoodCategory) res.HotelFoodCategoryResp {
 
-	r:=res.HotelFoodCategoryResp{
+	r := res.HotelFoodCategoryResp{
 		HotelFoodCategoryId:   c.HotelFoodCategoryId,
 		HotelFoodCategoryName: c.HotelFoodCategoryName,
 		HotelId:               c.HotelId,
@@ -21,7 +21,7 @@ func Convert2HotelFoodCategoryResp(c model.HotelFoodCategory) res.HotelFoodCateg
 }
 
 func convert2TakeOutItemResp(t *model.TakeOut) res.TakeOutItemResp {
-	r:= res.TakeOutItemResp{
+	r := res.TakeOutItemResp{
 		TakeOutId:           t.TakeOutId,
 		HotelFoodCategoryId: t.HotelFoodCategoryId,
 		FoodName:            t.FoodName,
@@ -37,7 +37,7 @@ func convert2TakeOutItemResp(t *model.TakeOut) res.TakeOutItemResp {
 }
 
 func (to *TakeOutService) GetTakeOutListByHotelId(hotelId string) res.TakeOutRsp {
-	items:= to.Repo.GetTakeOutListByHotelId(hotelId)
+	items := to.Repo.GetTakeOutListByHotelId(hotelId)
 	var takeoutRsp res.TakeOutRsp
 	if len(items) > 0 {
 		takeoutRsp.HotelName = items[0].HotelName

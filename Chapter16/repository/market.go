@@ -1,15 +1,15 @@
 package repository
 
 import (
-	"book-code/Chapter13/13-4/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 )
 
 type MarketRepo struct {
 	DB model.DataBase
 }
 
-func (m *MarketRepo) GetMarketInfo(hotelId string) model.Market  {
+func (m *MarketRepo) GetMarketInfo(hotelId string) model.Market {
 	var market model.Market
-	m.DB.MyDB.Where("hotel_id=?",hotelId).Find(&market)
+	m.DB.MyDB.Where("hotel_id=?", hotelId).Find(&market)
 	return market
 }

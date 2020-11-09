@@ -1,9 +1,9 @@
 package dp_service
 
 import (
-	"book-code/Chapter13/13-4/model"
-	"book-code/Chapter13/13-4/repository"
-	"book-code/Chapter13/13-4/res"
+	"github.com/i-coder-robot/book_final_code/Chapter16/model"
+	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
+	"github.com/i-coder-robot/book_final_code/Chapter16/res"
 )
 
 type TeamService struct {
@@ -31,8 +31,8 @@ func convert2TeamResp(items []model.TeamAggregation) res.TeamResp {
 	}
 	return resp
 }
-func TeamChooseItem(item *model.TeamChooseItem) res.TeamChooseItemResp{
-	r:=res.TeamChooseItemResp{
+func TeamChooseItem(item *model.TeamChooseItem) res.TeamChooseItemResp {
+	r := res.TeamChooseItemResp{
 		TeamChoseItemId:    item.TeamChoseItemId,
 		TeamChooseItemName: item.TeamChooseItemName,
 		TeamChooseItemTip:  item.TeamChooseItemTip,
@@ -46,5 +46,3 @@ func Convert2TeamChooseFoodResp(food *model.TeamChooseFood) res.TeamChooseFoodRe
 	r.TeamChooseFoodName = food.TeamChooseFoodName
 	return r
 }
-
-
