@@ -20,37 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a4f8bb-9be3-45d1-beaa-c82c782c7ad8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-3-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-3-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-3-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-3-4/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-4-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-4-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter2/2-5/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-4/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-5/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-7/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter3/3-1-8/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-1-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-1-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-1-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-1-4/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-2-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-2-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-2-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter4/4-4/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-2-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-2-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-2-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-2-4/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter5/5-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-6/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-8/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-8/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10/10-9/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10/10-9/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-0/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-0/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11/11-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11/11-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter14/14-6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter14/14-6/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter15/15-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter15/15-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter15/15-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter15/15-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter15/15-6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter15/15-6/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter15/15-7/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter15/15-7/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter15/15-8/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter15/15-8/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter17/17-1/health/health.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter17/17-1/health/health.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter17/17-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter17/17-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter17/17-1/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter17/17-1/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-3-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-3-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-3-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-3-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-3-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-3-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-3-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-3-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-4-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-4-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-4-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-4-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter6/6-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter6/6-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-1-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-1-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-1-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-1-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-10/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-10/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-12/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-12/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-2-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-2-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-2-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-2-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-5-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-5-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-6-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-6-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-6/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-7/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-7/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-8/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-8/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter7/7-9/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter7/7-9/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-6/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-6/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter8/8-7/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter8/8-7/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-4/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-4/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-5/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-5/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-8/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-8/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter9/9-9/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter9/9-9/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +98,14 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.3/libexec" />
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.4/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jzyCXJxwugit4Ooh4wB7I29J97" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,19 +116,31 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Chapter16" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chapter16" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chapter15/15-2" />
       <recent name="$PROJECT_DIR$/Chapter2" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
+  <component name="RunManager" selected="Go Build.go build main.go (5)">
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="book_final_code" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Chapter5/5-4/main.go" />
+      <filePath value="$PROJECT_DIR$/Chapter14/14-2/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="book_final_code" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Chapter14/14-3/main.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -99,7 +148,7 @@
       <module name="book_final_code" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Chapter5/5-1/main.go" />
+      <filePath value="$PROJECT_DIR$/Chapter14/14-4/main.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -107,7 +156,7 @@
       <module name="book_final_code" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Chapter5/5-2-1/main.go" />
+      <filePath value="$PROJECT_DIR$/Chapter14/14-5/main.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -115,25 +164,17 @@
       <module name="book_final_code" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Chapter5/5-2-2/main.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="book_final_code" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Chapter5/5-3/main.go" />
+      <filePath value="$PROJECT_DIR$/Chapter14/14-6/main.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build main.go (5)" />
         <item itemvalue="Go Build.go build main.go (4)" />
         <item itemvalue="Go Build.go build main.go (3)" />
+        <item itemvalue="Go Build.go build main.go (2)" />
+        <item itemvalue="Go Build.go build main.go (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -151,11 +192,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="544" y="842" key="#GOROOT" timestamp="1604826908345">
-      <screen x="0" y="23" width="1920" height="1001" />
+    <state x="544" y="982" key="#GOROOT" timestamp="1604898715812">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state x="544" y="982" key="#GOROOT/0.0.1920.1200@0.0.1920.1200" timestamp="1604898715812" />
     <state x="544" y="842" key="#GOROOT/0.23.1920.1001@0.23.1920.1001" timestamp="1604826908345" />
     <state x="849" y="348" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604827047541">
       <screen x="0" y="23" width="1920" height="1001" />
@@ -165,74 +208,90 @@
       <screen x="0" y="23" width="1920" height="1003" />
     </state>
     <state width="481" height="466" key="DebuggerActiveHint/0.23.1920.1003@0.23.1920.1003" timestamp="1604833434974" />
-    <state width="1275" height="329" key="GridCell.Tab.0.bottom" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="324" key="GridCell.Tab.0.bottom" timestamp="1604921226278">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1604921226278" />
     <state width="1302" height="329" key="GridCell.Tab.0.bottom/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="267" key="GridCell.Tab.0.bottom/0.23.1920.1002@0.23.1920.1002" timestamp="1604830648673" />
     <state width="1302" height="329" key="GridCell.Tab.0.bottom/0.23.1920.1003@0.23.1920.1003" timestamp="1604836004948" />
     <state width="1275" height="267" key="GridCell.Tab.0.bottom/0.23.1920.1004@0.23.1920.1004" timestamp="1604841596048" />
     <state width="1275" height="267" key="GridCell.Tab.0.bottom/0.23.1920.1005@0.23.1920.1005" timestamp="1604844409794" />
     <state width="1275" height="329" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.0.center" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="324" key="GridCell.Tab.0.center" timestamp="1604921226278">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="324" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1604921226278" />
     <state width="1302" height="329" key="GridCell.Tab.0.center/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="267" key="GridCell.Tab.0.center/0.23.1920.1002@0.23.1920.1002" timestamp="1604830648673" />
     <state width="1302" height="329" key="GridCell.Tab.0.center/0.23.1920.1003@0.23.1920.1003" timestamp="1604836004948" />
     <state width="1275" height="267" key="GridCell.Tab.0.center/0.23.1920.1004@0.23.1920.1004" timestamp="1604841596048" />
     <state width="1275" height="267" key="GridCell.Tab.0.center/0.23.1920.1005@0.23.1920.1005" timestamp="1604844409794" />
     <state width="1275" height="329" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.0.left" timestamp="1604846389620">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="324" key="GridCell.Tab.0.left" timestamp="1604921226277">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="324" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1604921226277" />
     <state width="1302" height="329" key="GridCell.Tab.0.left/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="267" key="GridCell.Tab.0.left/0.23.1920.1002@0.23.1920.1002" timestamp="1604830648672" />
     <state width="1302" height="329" key="GridCell.Tab.0.left/0.23.1920.1003@0.23.1920.1003" timestamp="1604836004948" />
     <state width="1275" height="267" key="GridCell.Tab.0.left/0.23.1920.1004@0.23.1920.1004" timestamp="1604841596048" />
     <state width="1275" height="267" key="GridCell.Tab.0.left/0.23.1920.1005@0.23.1920.1005" timestamp="1604844409794" />
     <state width="1275" height="329" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389620" />
-    <state width="1275" height="329" key="GridCell.Tab.0.right" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="324" key="GridCell.Tab.0.right" timestamp="1604921226278">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="324" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1604921226278" />
     <state width="1302" height="329" key="GridCell.Tab.0.right/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="267" key="GridCell.Tab.0.right/0.23.1920.1002@0.23.1920.1002" timestamp="1604830648673" />
     <state width="1302" height="329" key="GridCell.Tab.0.right/0.23.1920.1003@0.23.1920.1003" timestamp="1604836004948" />
     <state width="1275" height="267" key="GridCell.Tab.0.right/0.23.1920.1004@0.23.1920.1004" timestamp="1604841596048" />
     <state width="1275" height="267" key="GridCell.Tab.0.right/0.23.1920.1005@0.23.1920.1005" timestamp="1604844409794" />
     <state width="1275" height="329" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.1.bottom" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="400" key="GridCell.Tab.1.bottom" timestamp="1604911017090">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="400" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1604911017090" />
     <state width="1302" height="329" key="GridCell.Tab.1.bottom/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516375" />
     <state width="1302" height="329" key="GridCell.Tab.1.bottom/0.23.1920.1002@0.23.1920.1002" timestamp="1604830552838" />
     <state width="1302" height="329" key="GridCell.Tab.1.bottom/0.23.1920.1003@0.23.1920.1003" timestamp="1604836001761" />
     <state width="1275" height="329" key="GridCell.Tab.1.bottom/0.23.1920.1004@0.23.1920.1004" timestamp="1604841534868" />
     <state width="1275" height="329" key="GridCell.Tab.1.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.1.center" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="400" key="GridCell.Tab.1.center" timestamp="1604911017090">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="400" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1604911017090" />
     <state width="1302" height="329" key="GridCell.Tab.1.center/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="329" key="GridCell.Tab.1.center/0.23.1920.1002@0.23.1920.1002" timestamp="1604830552838" />
     <state width="1302" height="329" key="GridCell.Tab.1.center/0.23.1920.1003@0.23.1920.1003" timestamp="1604836001761" />
     <state width="1275" height="329" key="GridCell.Tab.1.center/0.23.1920.1004@0.23.1920.1004" timestamp="1604841534868" />
     <state width="1275" height="329" key="GridCell.Tab.1.center/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.1.left" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="400" key="GridCell.Tab.1.left" timestamp="1604911017089">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="400" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1604911017089" />
     <state width="1302" height="329" key="GridCell.Tab.1.left/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516374" />
     <state width="1302" height="329" key="GridCell.Tab.1.left/0.23.1920.1002@0.23.1920.1002" timestamp="1604830552838" />
     <state width="1302" height="329" key="GridCell.Tab.1.left/0.23.1920.1003@0.23.1920.1003" timestamp="1604836001761" />
     <state width="1275" height="329" key="GridCell.Tab.1.left/0.23.1920.1004@0.23.1920.1004" timestamp="1604841534868" />
     <state width="1275" height="329" key="GridCell.Tab.1.left/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
-    <state width="1275" height="329" key="GridCell.Tab.1.right" timestamp="1604846389621">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state width="1486" height="400" key="GridCell.Tab.1.right" timestamp="1604911017090">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1486" height="400" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1604911017090" />
     <state width="1302" height="329" key="GridCell.Tab.1.right/0.23.1920.1001@0.23.1920.1001" timestamp="1604827516375" />
     <state width="1302" height="329" key="GridCell.Tab.1.right/0.23.1920.1002@0.23.1920.1002" timestamp="1604830552838" />
     <state width="1302" height="329" key="GridCell.Tab.1.right/0.23.1920.1003@0.23.1920.1003" timestamp="1604836001761" />
     <state width="1275" height="329" key="GridCell.Tab.1.right/0.23.1920.1004@0.23.1920.1004" timestamp="1604841534868" />
     <state width="1275" height="329" key="GridCell.Tab.1.right/0.23.1920.1006@0.23.1920.1006" timestamp="1604846389621" />
+    <state x="794" y="254" width="746" height="692" key="find.popup" timestamp="1604899172288">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="794" y="254" width="746" height="692" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1604899172288" />
+    <state x="748" y="168" width="838" height="1032" key="search.everywhere.popup" timestamp="1604907104141">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="748" y="168" width="838" height="1032" key="search.everywhere.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1604907104141" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,6 +330,11 @@
           <url>file://$PROJECT_DIR$/Chapter5/5-4/main.go</url>
           <line>30</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Chapter13/test1/op_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
