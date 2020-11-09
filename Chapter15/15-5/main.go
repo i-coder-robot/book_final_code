@@ -1,5 +1,13 @@
 package main
 
+import "github.com/gin-gonic/gin"
+
 func main() {
-	$END$
+	r := gin.Default()
+
+	r.GET("/", func(c *gin.Context) {
+		c.String(200, c.Query("wechat"))
+	})
+	r.Run(":8080")
+
 }

@@ -1,5 +1,11 @@
 package main
 
+import "fmt"
+
 func main() {
-	$END$
+	for i := 0; i < 10; i++ {
+		go func() {
+			fmt.Println(i)
+		}()
+	}
 }
