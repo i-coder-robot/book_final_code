@@ -16,18 +16,6 @@ import (
 
 var (
 	DB                   *gorm.DB
-	AccountHandler       handler.AccountHandler
-	DiscountHandler      handler.DiscountHandler
-	RestaurantNavHandler handler.RestaurantNavHandler
-	HotelDetailHandler   handler.HotelDetailHandler
-	TeamDetailHandler    handler.TeamDetailHandler
-	OrderSeatHandler     handler.OrderSeatHandler
-	TakeOutHandler       handler.TakeOutHandler
-	MeHandler            handler.MeHandler
-	SuggestFoodHandler   handler.SuggestFoodHandler
-	GuessHandler         handler.GuessHandler
-	NavHandler           handler.NavHandler
-	PostTeamOrderHandler handler.PostTeamOrderHandler
 )
 
 func initViper() {
