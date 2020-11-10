@@ -30,6 +30,12 @@ var (
 	PostTeamOrderHandler handler.PostTeamOrderHandler
 )
 
+func init() {
+	initViper()
+	initDB()
+	initHandler()
+}
+
 func main() {
 	flag.Parse()
 

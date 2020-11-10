@@ -188,8 +188,4 @@ func initHandler() {
 	}
 }
 
-func init() {
-	initViper()
-	initDB()
-	initHandler()
-}
+

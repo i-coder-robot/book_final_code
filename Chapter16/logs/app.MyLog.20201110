@@ -25,3 +25,8 @@ net/http.serverHandler.ServeHTTP
 net/http.(*conn).serve
 	/usr/local/Cellar/go/1.15.4/libexec/src/net/http/server.go:1925
 2020-11-10 15:19:40	info	middleware/logging.go:50	46µs          | 127.0.0.1    | GET /hotel/detail/cba3ee46-5fbe-49c0-8f6c-a1cf7d7583a1 | {code: 30001, message: unexpected end of JSON input}
+2020-11-10 15:44:43	info	Chapter16/main.go:54	开始监听http地址:9090
+2020-11-10 15:44:46	info	middleware/logging.go:50	18.465ms      | 127.0.0.1    | GET /v1/dp/hotel/detail/cba3ee46-5fbe-49c0-8f6c-a1cf7d7583a1 | {code: 0, message: }
+2020-11-10 15:49:56	info	middleware/logging.go:50	2.732ms       | 127.0.0.1    | GET /v1/dp/hotel/detail/cba3ee46-5fbe-49c0-8f6c-a1cf7d7583a1 | {code: 0, message: }
+2020-11-10 15:53:12	info	Chapter16/main.go:54	开始监听http地址:9090
+2020-11-10 15:53:16	info	middleware/logging.go:50	3.177ms       | 127.0.0.1    | GET /v1/dp/hotel/detail/cba3ee46-5fbe-49c0-8f6c-a1cf7d7583a1 | {code: 0, message: }
