@@ -112,7 +112,7 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 		//获取团购详细信息
 		dp.GET("/team/detail/:id", TeamDetailHandler.TeamDetailHandler)
 		//团购下单
-		dp.POST("/team/order/:id", PostTeamOrderHandler.TeamOrderHandler)
+		dp.POST("/team/order", PostTeamOrderHandler.TeamOrderHandler)
 		//订座下单
 		dp.POST("/seat/order/:hotelId", OrderSeatHandler.OrderSeat)
 		//外卖

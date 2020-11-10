@@ -21,3 +21,26 @@ net/http.serverHandler.ServeHTTP
 	/usr/local/Cellar/go/1.15.4/libexec/src/net/http/server.go:2843
 net/http.(*conn).serve
 	/usr/local/Cellar/go/1.15.4/libexec/src/net/http/server.go:1925
+2020-11-10 16:19:06	error	middleware/logging.go:45	unexpected end of JSON input
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	/Users/monster/GitHub/book_final_code/Chapter16/middleware/logging.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:161
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	/Users/monster/GitHub/book_final_code/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:161
+github.com/gin-gonic/gin.RecoveryWithWriter.func1
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/recovery.go:83
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/context.go:161
+github.com/gin-gonic/gin.serveError
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:445
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:438
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/monster/go/pkg/mod/github.com/gin-gonic/gin@v1.6.3/gin.go:367
+net/http.serverHandler.ServeHTTP
+	/usr/local/Cellar/go/1.15.4/libexec/src/net/http/server.go:2843
+net/http.(*conn).serve
+	/usr/local/Cellar/go/1.15.4/libexec/src/net/http/server.go:1925

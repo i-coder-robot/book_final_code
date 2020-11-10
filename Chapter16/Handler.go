@@ -184,6 +184,11 @@ func initHandler() {
 					MyDB: DB,
 				},
 			},
+			TeamRepo: &repository.TeamRepo{
+				DB: model.DataBase{
+					MyDB: DB,
+				},
+			},
 		},
 	}
 }
