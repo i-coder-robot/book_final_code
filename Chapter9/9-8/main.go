@@ -27,9 +27,9 @@ func (c Chef) GetHonor() string{
 
 
 func main() {
-	var c interface{}
-	c="abc"
-	switch c.(type) {
+	var x interface{}
+	x="abc"
+	switch x.(type) {
 		case string:
 			fmt.Println("")
 		case bool:
