@@ -124,9 +124,6 @@ func (h *AccountHandler) Update(c *gin.Context) {
 		return
 	}
 
-	// 找到要更新的Account的ID
-	m.AccountId = c.Param("id")
-
 	// 密码加密处理.
 	md5Pwd, err := utils.Encrypt(m.Password)
 	if err != nil {

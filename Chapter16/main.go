@@ -68,12 +68,18 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 
 	account := engine.Group("/v1/account")
 	{
-		account.POST("", AccountHandler.AccountCreate)           //新增用户
+
 		account.GET("", AccountHandler.ListAccount)              // 获取用户列表
 		account.GET("/:account_name", AccountHandler.GetAccount) // 获取指定用户的详细信息
+		account.POST("", AccountHandler.AccountCreate)           //新增用户
 		account.DELETE("/:id", AccountHandler.Delete)            // 删除用户
-		account.PUT("/:id", AccountHandler.Update)               // 更新用户
-		account.POST("/login", AccountHandler.Login)
+		account.PUT("/", AccountHandler.Update)               // 更新用户
+
+
+
+		account.POST("/login", AccountHandler.Login) //登录
+
+
 		account.POST("/wxlogin", AccountHandler.WXLogin)
 
 	}

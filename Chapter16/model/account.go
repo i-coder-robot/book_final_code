@@ -31,7 +31,7 @@ type Token struct {
 }
 
 type Account struct {
-	AccountId   string `json:"Id" gorm:"column:account_id;not null"`
+	AccountId   string `json:"accountId" gorm:"column:account_id;not null"`
 	AccountName string `json:"accountName" gorm:"column:account_name;not null" binding:"required" validate:"min=1,max=32"`
 	Password    string `json:"password" gorm:"column:password;not null" binding:"required" validate:"min=5,max=128"`
 }

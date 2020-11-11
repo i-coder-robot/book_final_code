@@ -32,7 +32,7 @@ func (m *AccountModelRepo) DeleteAccount(id string) error {
 func (m *AccountModelRepo) UpdateAccount(account model.Account) error {
 	err := m.DB.MyDB.Model(model.Account{}).Where("account_id=?", account.AccountId).Updates(map[string]interface{}{
 		"account_name":     account.AccountName,
-		"account_password": account.Password,
+		"password": account.Password,
 	}).Error
 	return err
 }
