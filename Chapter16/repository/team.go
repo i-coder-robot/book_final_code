@@ -25,7 +25,7 @@ func (t *TeamRepo) GetTeamDetail(teamDetailId string) []model.TeamAggregation {
 	}
 	var teamAggregations []model.TeamAggregation
 	//t.DB.MyDB.Table("team_detail").Joins("JOIN team_choose_food on team_detail.team_detail_id=team_choose_food.team_detail_id").Joins("JOIN team_choose_item on team_choose_food.team_choose_food_id=team_choose_item.team_choose_food_id").Select("team_detail.*,team_choose_food.*,team_choose_item.*").Scan(&teamAggregations).Debug()
-	t.DB.MyDB.Table("team_detail").Joins("JOIN team_choose_food on team_detail.team_detail_id=team_choose_food.team_detail_id").Joins("JOIN team_choose_item on team_choose_food.team_choose_food_id=team_choose_item.team_choose_food_id").Select("team_detail.*,team_choose_food.*,team_choose_item.*").Scan(&teamAggregations)
+	t.DB.MyDB.Table("team_detail").Where("team_detail.team_detail_id = ?", teamDetailId).Joins("JOIN team_choose_food on team_detail.team_detail_id=team_choose_food.team_detail_id").Joins("JOIN team_choose_item on team_choose_food.team_choose_food_id=team_choose_item.team_choose_food_id").Select("team_detail.*,team_choose_food.*,team_choose_item.*").Scan(&teamAggregations)
 
 	return teamAggregations
 }
