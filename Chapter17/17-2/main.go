@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	cfg = flag.String("config", "c", "")
+	cfg = flag.String("config", "", "")
 )
 
 func main() {
