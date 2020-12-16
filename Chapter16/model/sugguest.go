@@ -3,6 +3,7 @@ package model
 //首页推荐
 type Suggest struct {
 	//SuggestId
+
 	SuggestId string `json:"suggestId"`
 	//关键字
 	KeyWord1 string `json:"keyWord1"`
@@ -10,7 +11,7 @@ type Suggest struct {
 	KeyWord3 string `json:"keyWord3"`
 	KeyWord4 string `json:"keyWord4"`
 	//图片地址
-	Img string `json:"img"`
+	Src string `json:"src"`
 	//菜品名称
 	FoodName string `json:"foodName"`
 	//icon图标
@@ -28,4 +29,3 @@ type Suggest struct {
 	//等级分类
 	Level int `json:"level"`
 }
-

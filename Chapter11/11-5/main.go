@@ -26,7 +26,7 @@ func main() {
 func Free() {
 	fmt.Println("如果今天有过生日的人，会说出一个数字，这个数字如果和我们的一致，则这顿饭免单")
 	secret := rand.Intn(100)
-	cxt, cancelFunc := context.WithCancel(context.Background())
+	ctx, cancelFunc := context.WithCancel(context.Background())
 	for i := 1; i <= 3; i++ {
 		var num int32
 		r := rand.Intn(100)
@@ -40,7 +40,7 @@ func Free() {
 		})
 	}
 	go func() {
-		<-cxt.Done()
+		<-ctx.Done()
 	}()
 	fmt.Println("答案是" + strconv.Itoa(secret))
 	fmt.Println("感谢光临，聚餐结束。")

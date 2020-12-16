@@ -8,4 +8,5 @@ type MeItem struct {
 	Src string `json:"src"`
 	//标题
 	Title string `json:"title"`
+	Type  string `json:"type"`
 }

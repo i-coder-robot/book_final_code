@@ -14,7 +14,7 @@ type Discount struct {
 	//优惠餐馆
 	DiscountItemHotel string `json:"discountItemHotel"`
 	//优惠价格
-	DiscountItemGoodsPrice int32 `json:"discountItemGoodsPrice"`
+	DiscountItemGoodPrice int32 `json:"discountItemGoodsPrice"`
 	//原始价格
 	DiscountItemPrice int32 `json:"discountItemPrice"`
 	//折扣
