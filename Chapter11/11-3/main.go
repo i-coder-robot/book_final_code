@@ -9,7 +9,6 @@ func main() {
 	var num1 uint64
 	atomic.AddUint64(&num1,70)
 	fmt.Println(num1)
-
 	atomic.AddUint64(&num1, ^uint64(23))
 	fmt.Println(num1)
 

@@ -8,7 +8,7 @@ import (
 type Chef struct {
 	Name    string //名称
 	Age     int    //年龄
-	Honor          //荣誉
+	*Honor          //荣誉
 	Trainee *Chef  //徒弟,这里为了演示，可以认为徒弟有多个，用切片表示
 }
 
@@ -18,10 +18,13 @@ type Honor struct {
 }
 
 func main() {
+	t:= struct {}{}
+	fmt.Println(t)
+
 	li := Chef{
 		Name:    "李师傅",
 		Age:     25,
-		Honor:   Honor{},
+		Honor:   &Honor{},
 		Trainee: nil,
 	}
 	li.Title = "中华金厨奖"

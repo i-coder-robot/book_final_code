@@ -17,7 +17,20 @@ type Honor struct {
 	GetTime time.Time //获奖时间
 }
 
+type Demo struct {
+	A string
+	C string
+	B string
+}
+
 func main() {
+
+	d:=Demo{
+		A: "a",
+		B: "b",
+	}
+	fmt.Println(d)
+
 	wang :=Chef{"王师傅",25,Honor{},nil}
 	fmt.Printf("%s",wang.Name)
 	fmt.Println((&wang).Name)
