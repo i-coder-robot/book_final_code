@@ -54,6 +54,7 @@ func main() {
 		Age:  25,
 	}
 	WorkForDinner(&zhang,"盐焗鸡")
+
 	var ci ChefInterface
 	fmt.Printf("%T\n",ci)
 	ci=new(Chef)

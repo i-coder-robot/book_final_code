@@ -12,4 +12,10 @@ func main() {
 	copy(foodsSlice6,foodsSlice2)
 	fmt.Println(foodsSlice2)
 	fmt.Println(foodsSlice6)
+
+	var foodsSlice3 =[]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
+	foodsSlice7:=[]string{"米饭","面条"}
+	copy(foodsSlice3,foodsSlice7)
+	fmt.Println(foodsSlice3)
+	fmt.Println(foodsSlice7)
 }

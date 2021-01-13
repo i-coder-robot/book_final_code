@@ -6,13 +6,23 @@ func main() {
 	var foods =[5]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
 	var foodsSlice []string = foods[0:3]
 	fmt.Println(foodsSlice)
+
 	fmt.Println(foods[1:4])
 	fmt.Println(foods[:2])
 
 	var foodsSlice2 =[]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
+
+
+	foodsSlice3 :=make([]string,6)
+	fmt.Println(foodsSlice3)
+	foodsSlice4 :=make([]string,6,8)
+	fmt.Println(foodsSlice4)
+
 	foodsSlice5:= foodsSlice2[1:4]
 	fmt.Println(len(foodsSlice5))
 	fmt.Println(cap(foodsSlice5))
+
+
 	foodSlice4 :=[]string{"红烧肉"}
 	fmt.Println(foodSlice4)
 	fmt.Println(fmt.Sprintf("Len:%d",len(foodSlice4)))

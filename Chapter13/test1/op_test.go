@@ -12,3 +12,9 @@ func TestSum(t *testing.T) {
 	assert.Equal(t,result,45)
 }
 
+func BenchmarkSum(b *testing.B) {
+	for i:=0;i<100;i++{
+		Sum()
+	}
+}
+

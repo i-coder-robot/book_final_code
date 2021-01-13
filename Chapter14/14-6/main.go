@@ -5,18 +5,13 @@ import (
 	"reflect"
 )
 
-type IFly interface {
-	Fly()
-}
-type Bird struct {
-	Name string
-}
-func (b *Bird) Fly() {}
-
-
 func main() {
-	bird := &Bird{}
-	t := reflect.TypeOf((*IFly)(nil)).Elem()
-	refType := reflect.TypeOf(bird)
-	fmt.Println(refType.Implements(t))
+	v := "红烧肉"
+	t := reflect.TypeOf(v)
+	switch t.Kind() {
+	case reflect.Int:
+		fmt.Println("int")
+	case reflect.String:
+		fmt.Println("string")
+	}
 }

@@ -1,20 +1,54 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-func MakeFood(c chan string) {
-	foods := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
-	for _, item := range foods {
-		c <- item
-	}
+func GetFood1(c chan string) {
+	time.Sleep(3 * time.Second)
 	close(c)
 }
 
+func GetFood2(c chan string) {
+	time.Sleep(3 * time.Second)
+	c <- "清蒸鱼好了。"
+}
+
+func GetFood3(c chan string) {
+	time.Sleep(2 * time.Second)
+	c <- "烤生蚝好了。"
+}
+
 func main() {
-	ch :=make(chan string)
-	go MakeFood(ch)
-	for i:=range ch{
-		fmt.Println(i+" 菜好了")
+	c1 := make(chan string)
+	c2 := make(chan string)
+	c3 := make(chan string)
+
+	go GetFood1(c1)
+	go GetFood2(c2)
+	go GetFood3(c3)
+
+	select {
+	case r := <-c1:
+		fmt.Println(r)
+	case r := <-c2:
+		fmt.Println(r)
+	case r := <-c3:
+		fmt.Println(r)
+	default:
+		fmt.Println("菜还没有好。")
 	}
-	fmt.Println("您的菜，上齐了。")
+
+
+	select {
+	case r:=<-c1:
+		fmt.Println(r)
+	case r:=<-c2:
+		fmt.Println(r)
+	case r:=<-c3:
+		fmt.Println(r)
+		break
+	}
+
 }
