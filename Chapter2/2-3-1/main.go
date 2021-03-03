@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	name:="peter"
+	name := "peter"
 	fmt.Println(strings.ToUpper(name))
-
 }

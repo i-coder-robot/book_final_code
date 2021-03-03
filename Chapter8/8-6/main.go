@@ -28,7 +28,7 @@ type Honor3 struct {
 	GetTime time.Time //获奖时间
 }
 type Chef3 struct {
-	Name    string //名称 
+	Name    string //名称
 	Age     int    //年龄
 	Honor3         //荣誉
 	Trainee *Chef3 //徒弟，这里为了演示，可以认为徒弟有多个，用切片表示
@@ -53,12 +53,12 @@ func main() {
 	result = wang.FavCook("糖心鲍鱼")
 	fmt.Printf("%s", result)
 
-	zhao:=&Chef3{
-		Name: "赵师傅",
-		Age: 26,
-		Honor3:Honor3{},
+	zhao := &Chef3{
+		Name:    "赵师傅",
+		Age:     26,
+		Honor3:  Honor3{},
 		Trainee: nil,
 	}
-	fmt.Printf("%s",zhao.Cook("蛋炒饭"))
-	fmt.Printf("%s",zhao.FavCook("小炒肉"))
+	fmt.Printf("%s", zhao.Cook("蛋炒饭"))
+	fmt.Printf("%s", zhao.FavCook("小炒肉"))
 }

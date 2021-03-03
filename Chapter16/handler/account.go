@@ -115,7 +115,6 @@ func (h *AccountHandler) GetAccount(c *gin.Context) {
 }
 
 func (h *AccountHandler) Update(c *gin.Context) {
-	MyLog.Log.Info("执行更新操作.Request-Id: ", utils.GetRequestID(c))
 
 	// 绑定 account.
 	var m model.Account

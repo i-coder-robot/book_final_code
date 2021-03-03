@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	age:=23
-	fmt.Println("我的年龄是"+strconv.Itoa(age))
+	age := 23
+	fmt.Println("我的年龄是:" + strconv.Itoa(age))
 
 }
