@@ -2,27 +2,36 @@ package main
 
 import "fmt"
 
-func ShowName(names []string) {
-	for _, name := range names {
-		fmt.Println("这是：" + name)
-	}
+type Hi func(num string) string
+
+func Hello(num string) string {
+	return num + "位客人，欢迎光临"
 }
 
-func ShowName2(names []string) {
-	for idx, name := range names {
-		if name == "蒜蓉粉丝扇贝" {
-			names[idx] = "鲍鱼粥"
-		}
-		fmt.Println("这是：" + name)
-	}
+func Hello4DongBei(num string) string {
+	return num + "位兄弟，欢迎光临"
+}
+
+func SayHello(num string, hi Hi) {
+	result := hi(num)
+	fmt.Println(result)
 }
 
 func main() {
-	list := []string{
-		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
-	}
-	ShowName(list)
+	var hello Hi
+	hello = Hello
+	words := hello("3")
+	fmt.Printf("%s\n", words)
 
-	ShowName2(list)
-	fmt.Println(list)
+	hello = Hello4DongBei
+	words = hello("5")
+	fmt.Printf("%s\n", words)
+
+	target := "东北食客"
+	if target == "东北食客" {
+		SayHello("3", Hello4DongBei)
+	} else {
+		SayHello("6", Hello)
+	}
+
 }

@@ -5,23 +5,17 @@ import (
 	"reflect"
 )
 
-type Person struct {
-	Age  int    `json:"name" test:"testname"`
-	Name string `json:"age" test:"testage"`
-}
+type T struct{}
 
 func main() {
-	p := Person{
-		Age:  23,
-		Name: "小明",
-	}
-	refType := reflect.TypeOf(p)
-	for i := 0; i < refType.NumField(); i++ {
-		field := refType.Field(i)
-		if jsonItem, ok := field.Tag.Lookup("json"); ok {
-			fmt.Println(jsonItem)
-		}
-		testItem := field.Tag.Get("test")
-		fmt.Println(testItem)
-	}
+	name := "GoodDinner"
+	t := &T{}
+	param1 := reflect.ValueOf(666)
+	param2 := reflect.ValueOf("红烧肉")
+	params := []reflect.Value{param1, param2}
+	reflect.ValueOf(t).MethodByName(name).Call(params)
+}
+
+func (t *T) GoodDinner(a int, b string) {
+	fmt.Println("吃顿好的，"+b, a)
 }

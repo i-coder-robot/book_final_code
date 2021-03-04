@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	DB                   *gorm.DB
+	DB *gorm.DB
 )
 
 func initViper() {
@@ -159,6 +159,15 @@ func initHandler() {
 			},
 		},
 	}
+	SuggestHandler = handler.SuggestHandler{
+		Srv: &dp_service.SuggestService{
+			Repo: &repository.SuggestRepo{
+				DB: model.DataBase{
+					MyDB: DB,
+				},
+			},
+		},
+	}
 	GuessHandler = handler.GuessHandler{
 		Srv: &dp_service.GuessService{
 			Repo: &repository.GuessRepo{
@@ -192,5 +201,3 @@ func initHandler() {
 		},
 	}
 }
-
-

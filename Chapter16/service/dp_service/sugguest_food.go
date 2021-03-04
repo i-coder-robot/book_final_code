@@ -16,3 +16,11 @@ func (sf *SuggestFoodService) ListSuggestList(level int) []model.Suggest {
 func (sf *SuggestFoodService) GetFoodByHotelId(hotelId string) []model.SuggestFood {
 	return sf.Repo.GetFoodByHotelId(hotelId)
 }
+
+type SuggestService struct {
+	Repo *repository.SuggestRepo
+}
+
+func (sf *SuggestService) GetSuggestByLevel(level int) model.Suggest {
+	return sf.Repo.ListSuggest(level)
+}

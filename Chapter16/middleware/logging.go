@@ -10,6 +10,7 @@ import (
 	"github.com/i-coder-robot/book_final_code/Chapter16/res"
 	"github.com/willf/pad"
 	"io/ioutil"
+	"strings"
 	"time"
 )
 
@@ -17,6 +18,12 @@ func Logging() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		start := time.Now().UTC()
 		path := context.Request.URL.Path
+
+		reqUrl := context.Request.URL.Path
+		if strings.Contains(reqUrl, "image") {
+			//context.Next()
+			return
+		}
 
 		var bodies []byte
 		if context.Request.Body != nil {

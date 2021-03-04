@@ -6,29 +6,22 @@ import (
 )
 
 type Person struct {
-	Age int    `json:"NewAge"`
-	Name string `json:"NewName"`
+	Age  int    `json:"name" test:"testname"`
+	Name string `json:"age" test:"testage"`
 }
-type newPerson struct {
-	NewAge  int
-	NewName string
-}
-
 
 func main() {
-	t := Person{
-		Age: 23,
+	p := Person{
+		Age:  23,
 		Name: "小明",
 	}
-	refType := reflect.TypeOf(t)
-	refValue := reflect.ValueOf(t)
-	newPerson := &newPerson{}
-	newValue := reflect.ValueOf(newPerson)
+	refType := reflect.TypeOf(p)
 	for i := 0; i < refType.NumField(); i++ {
 		field := refType.Field(i)
-		newTag := field.Tag.Get("json")
-		tValue := refValue.Field(i)
-		newValue.Elem().FieldByName(newTag).Set(tValue)
+		if jsonItem, ok := field.Tag.Lookup("json"); ok {
+			fmt.Println(jsonItem)
+		}
+		testItem := field.Tag.Get("test")
+		fmt.Println(testItem)
 	}
-	fmt.Println(newPerson)
 }

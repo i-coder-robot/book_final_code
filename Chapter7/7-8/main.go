@@ -1,38 +1,20 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "sync"
 
-type Discount func() float64
-type CheckSum func(name string, price float64) float64
+var mu sync.Mutex
+var m map[string]int
 
-func PayOrder(discount Discount) CheckSum {
-	var total float64
-	return func(name string, price float64) float64 {
-		fmt.Println("菜品名称:" + name + "单价:" + strconv.FormatFloat(price, 'f', -1, 64))
-		total = total + price
-		if discount == nil {
-			return total
-		}
-		return total * discount()
-	}
+func lookup(key string) int {
+	mu.Lock()
+	defer mu.Unlock()
+	return m[key]
 }
 
 func main() {
-	f:=PayOrder(func() float64 {
-		return 0.8
-	})
-	result:=f("红烧肉", 88)
-	fmt.Println(result)
-	result=f("清蒸鱼",98)
-	fmt.Println(result)
-	result=f("溜大虾", 128)
-	fmt.Println(result)
-	result=f("蒸螃蟹", 198)
-	fmt.Println(result)
-	result=f("蒜蓉粉丝扇贝",68)
-	fmt.Println(result)
-
+	m := make(map[string]int)
+	m["abc"] = 123
+	m["m"] = 3
+	m["g"] = 80
+	lookup("g")
 }

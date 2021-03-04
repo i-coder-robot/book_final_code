@@ -6,6 +6,6 @@ database:
   name: db
   addr: 127.0.0.1:3306
   username: root
-  password: smartwell
+  password: root
 wx_app_id: 123
 wx_secret: 123

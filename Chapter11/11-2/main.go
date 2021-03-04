@@ -3,43 +3,85 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
+func GetSeatNoLock(name string) {
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+}
+
+var m sync.Mutex
+
+func GetSeat(name string) {
+	m.Lock()
+	defer m.Unlock()
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+}
+
 func main() {
-	var buySth string
-	var box sync.RWMutex
-	sendCond := sync.NewCond(&box)
-	recvCond := sync.NewCond(box.RLocker())
-	flag := make(chan bool, 5)
-	go func() {
-		defer func() {
-			fmt.Println("已投递，完成~")
-			flag <- true
-		}()
-		box.Lock()
-		for buySth == "已投递" {
-			sendCond.Wait()
-		}
-		buySth = "已投递"
+	s := []string{"老张", "老王", "老李"}
+	for i := 0; i < len(s); i++ {
+		go GetSeatNoLock(s[i])
+	}
+	time.Sleep(5 * time.Second)
 
-		box.Unlock()
-		recvCond.Signal()
-	}()
+	for i := 0; i < len(s); i++ {
+		go GetSeat(s[i])
+	}
 
-	go func() {
-		defer func() {
-			fmt.Println("货物已经取走")
-			flag <- true
-		}()
-		box.RLock()
-		for buySth == "" {
-			recvCond.Wait()
-		}
-		buySth = ""
-		box.RUnlock()
-		sendCond.Signal()
-	}()
+	time.Sleep(5 * time.Second)
 
-	<-flag
-	<-flag
+	for i := 0; i < len(s); i++ {
+		go CheckSeatWithRWLock(s[i])
+		go GetSeatWithRWLock(s[i])
+	}
+
+	time.Sleep(8 * time.Second)
+}
+
+var rw sync.RWMutex
+
+func GetSeatWithRWLock(name string) {
+	rw.Lock()
+	defer rw.Unlock()
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+}
+func CheckSeatWithRWLock(name string) {
+	rw.RLock()
+	defer rw.RUnlock()
+	fmt.Println(name + " 查看位置。")
+	time.Sleep(1 * time.Second)
+}
+
+func GetSeatError(name string) {
+	m.Lock()
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+	//这个地方是模拟忘记写了，会引发错误，所以注释掉
+	//m.Unlock()
+}
+
+func GetSeatReLock(name string) {
+	m.Lock()
+	m.Lock()
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+	m.Unlock()
+	m.Unlock()
+}
+
+func GetSeatByPass(name string, locker sync.RWMutex) {
+	locker.Lock()
+	fmt.Println(name + " 已经抢到位置。")
+	time.Sleep(1 * time.Second)
+	fmt.Println(name + " 已经离开。")
+	locker.Unlock()
 }

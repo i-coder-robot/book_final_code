@@ -1,26 +1,35 @@
 package main
 
-type ICook interface {
-	Cook(name string)
-	Buy()
-	Eat()
+import "fmt"
+
+//定义一个鸭子接口
+type Duck interface {
+	Cook()
 }
 
-type Chef struct {
+//吊炉烤鸭
+type DiaoLu struct{}
+
+func (dl *DiaoLu) Cook() {
+	fmt.Println("今天去吃,吊炉烤鸭")
 }
 
-func (c Chef) Cook(name string) {
+//焖炉烤鸭
+type MenLu struct{}
 
+func (ml *MenLu) Cook() {
+	fmt.Println("今天去吃,焖炉烤鸭")
 }
 
-func (c Chef) Buy() {
-
-}
-
-func (c Chef) Eat() {
-
+func CookDuck(d Duck) {
+	d.Cook()
 }
 
 func main() {
+	fmt.Println("duck typing")
+	var d DiaoLu
+	var m MenLu
 
+	CookDuck(&d)
+	CookDuck(&m)
 }

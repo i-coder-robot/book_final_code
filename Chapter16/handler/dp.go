@@ -43,6 +43,10 @@ type SuggestFoodHandler struct {
 	Srv *dp_service.SuggestFoodService
 }
 
+type SuggestHandler struct {
+	Srv *dp_service.SuggestService
+}
+
 type GuessHandler struct {
 	Srv *dp_service.GuessService
 }
@@ -153,7 +157,7 @@ func (h *TakeOutHandler) GetTakeOutByHotelId(c *gin.Context) {
 	})
 }
 
-func (h *MeHandler) Me(c *gin.Context) {
+func (h *MeHandler) MeHandler(c *gin.Context) {
 	items := h.Srv.ListMe()
 	c.JSON(http.StatusOK, gin.H{
 		"items": items,
@@ -184,6 +188,18 @@ func (h *SuggestFoodHandler) RushHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"item": items})
 }
 
+func (h *SuggestHandler) TeamHandler(c *gin.Context) {
+	fmt.Println("TeamHandler....")
+	item := h.Srv.GetSuggestByLevel(1)
+	fmt.Println(item)
+	c.JSON(http.StatusOK, gin.H{"item": item})
+}
+
+func (h *SuggestHandler) RushHandler(c *gin.Context) {
+	item := h.Srv.GetSuggestByLevel(2)
+	c.JSON(http.StatusOK, gin.H{"item": item})
+}
+
 func (h *GuessHandler) Guess(c *gin.Context) {
 	items := h.Srv.ListGuess()
 	c.JSON(http.StatusOK, gin.H{
@@ -193,6 +209,7 @@ func (h *GuessHandler) Guess(c *gin.Context) {
 
 func ImageHandler(c *gin.Context) {
 	imageName := c.Query("imageName")
+	fmt.Println(imageName)
 	dir, _ := os.Getwd()
 	file, ok := ioutil.ReadFile(dir + "/static/images/" + imageName + ".png")
 	if ok != nil {
