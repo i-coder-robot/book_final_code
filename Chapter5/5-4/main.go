@@ -27,13 +27,13 @@ Out:
 		}
 	}
 
-	//foods :=[]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
-	//for i :=range foods{
-	//	fmt.Println(i)
-	//}
+	foods :=[]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
+	for i :=range foods{
+		fmt.Println(i)
+	}
 
-	foods := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"}
-	for i, item := range foods {
+	foods2 := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"}
+	for i, item := range foods2 {
 		result := fmt.Sprintf("%d--%q", i, item)
 		fmt.Println(result)
 	}

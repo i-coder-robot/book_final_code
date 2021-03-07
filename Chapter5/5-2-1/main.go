@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	name:="麻辣小龙虾"
 	if name=="麻辣小龙虾"{
-		fmt.Println("晚上吃麻辣小龙虾去")
+		fmt.Println("晚上吃麻辣小龙虾")
 	}
 
 	cause:="正常下班"
