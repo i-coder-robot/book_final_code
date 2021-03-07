@@ -28,13 +28,12 @@ func main() {
 		go GetSeatNoLock(s[i])
 	}
 	time.Sleep(5 * time.Second)
-
+	fmt.Println("-------------------")
 	for i := 0; i < len(s); i++ {
 		go GetSeat(s[i])
 	}
-
 	time.Sleep(5 * time.Second)
-
+	fmt.Println("-------------------")
 	for i := 0; i < len(s); i++ {
 		go CheckSeatWithRWLock(s[i])
 		go GetSeatWithRWLock(s[i])
@@ -57,31 +56,4 @@ func CheckSeatWithRWLock(name string) {
 	defer rw.RUnlock()
 	fmt.Println(name + " 查看位置。")
 	time.Sleep(1 * time.Second)
-}
-
-func GetSeatError(name string) {
-	m.Lock()
-	fmt.Println(name + " 已经抢到位置。")
-	time.Sleep(1 * time.Second)
-	fmt.Println(name + " 已经离开。")
-	//这个地方是模拟忘记写了，会引发错误，所以注释掉
-	//m.Unlock()
-}
-
-func GetSeatReLock(name string) {
-	m.Lock()
-	m.Lock()
-	fmt.Println(name + " 已经抢到位置。")
-	time.Sleep(1 * time.Second)
-	fmt.Println(name + " 已经离开。")
-	m.Unlock()
-	m.Unlock()
-}
-
-func GetSeatByPass(name string, locker sync.RWMutex) {
-	locker.Lock()
-	fmt.Println(name + " 已经抢到位置。")
-	time.Sleep(1 * time.Second)
-	fmt.Println(name + " 已经离开。")
-	locker.Unlock()
 }

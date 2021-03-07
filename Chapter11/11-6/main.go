@@ -21,6 +21,20 @@ func main() {
 	case <-ctx.Done():
 		fmt.Println(ctx.Err())
 	}
+
+	f := func(ctx context.Context, k string) {
+		if v := ctx.Value(k); v != nil {
+			fmt.Println("找到了:", v)
+			return
+		}
+		fmt.Println("没找到:", k)
+	}
+
+	k := "language"
+	ctx2 := context.WithValue(context.Background(), k, "Go")
+
+	f(ctx2, k)
+	f(ctx, "color")
 }
 
 func Free() {
