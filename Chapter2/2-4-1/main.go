@@ -11,4 +11,7 @@ func main() {
 
 	fmt.Println(9/3)
 
+	fmt.Println(1+2*3)
+
+	fmt.Println((1+2)*3)
 }
