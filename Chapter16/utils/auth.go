@@ -2,8 +2,8 @@ package utils
 
 import (
 	"github.com/go-playground/validator/v10"
-	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 	"github.com/i-coder-robot/book_final_code/Chapter16/myerr"
+	"github.com/i-coder-robot/book_final_code/Chapter17/model"
 	"golang.org/x/crypto/bcrypt"
 )
 

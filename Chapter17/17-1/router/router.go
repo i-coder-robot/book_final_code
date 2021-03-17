@@ -18,5 +18,4 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 	}
 
 	return engine
-
 }

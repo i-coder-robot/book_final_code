@@ -6,13 +6,9 @@ func main() {
 	var foods = [5]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
 	var foodsSlice []string = foods[0:3]
 	fmt.Println(foodsSlice)
-	var foodsSlicePart1 []string = foods[1:4]
-	fmt.Println(foodsSlicePart1)
-	var foodsSlicePart2 []string = foods[:2]
-	fmt.Println(foodsSlicePart2)
-
-	var foodsSlicePart3 []string = foods[3:]
-	fmt.Println(foodsSlicePart3)
+	fmt.Println(foods[1:4])
+	fmt.Println(foods[:2])
+	fmt.Println(foods[3:])
 
 	var foodsSlice2 = []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
 

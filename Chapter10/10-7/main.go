@@ -11,6 +11,6 @@ func main() {
 	fmt.Println("主协程开始运行")
 	c := make(chan bool)
 	go Eat("生蚝", c)
-	fmt.Println("主协程运行技术")
+	fmt.Println("主协程运行结束")
 	<-c
 }

@@ -36,28 +36,4 @@ func main() {
 	result = li.FavCook("葱烧海参")
 	fmt.Println(result)
 
-	li2 := Chef{
-		Name:    "李师傅",
-		Age:     25,
-		Honor:   Honor{},
-		Trainee: nil,
-	}
-	liPoint := &li2
-	result2 := liPoint.Cook("红烧肉")
-	fmt.Println(result2)
-	result2 = liPoint.FavCook("葱烧海参")
-	fmt.Println(result2)
-
-
-	li3  := Chef{
-		Name: "李师傅",
-		Age:  25,
-		Honor:Honor{},
-		Trainee: nil,
-	}
-	result3:=(&li3).Cook("红烧肉")
-	fmt.Println(result3)
-	result3=(&li3).FavCook("葱烧海参")
-	fmt.Println(result3)
-
 }

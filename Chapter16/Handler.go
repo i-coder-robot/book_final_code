@@ -7,7 +7,6 @@ import (
 	"github.com/i-coder-robot/book_final_code/Chapter16/handler"
 	"github.com/i-coder-robot/book_final_code/Chapter16/model"
 	"github.com/i-coder-robot/book_final_code/Chapter16/repository"
-	"github.com/i-coder-robot/book_final_code/Chapter16/service"
 	"github.com/i-coder-robot/book_final_code/Chapter16/service/dp_service"
 	"github.com/jinzhu/gorm"
 	"github.com/spf13/viper"
@@ -51,12 +50,6 @@ func initDB() {
 }
 
 func initHandler() {
-	AccountHandler = handler.AccountHandler{
-		Srv: &service.AccountService{
-			Repo: &repository.AccountModelRepo{
-				DB: model.DataBase{MyDB: DB},
-			},
-		}}
 	DiscountHandler = handler.DiscountHandler{
 		Srv: &dp_service.DiscountService{
 			Repo: &repository.Discount{

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//方法注释
 func Fav() {
 	fmt.Println("我喜欢吃生蚝")
 }

@@ -18,19 +18,6 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 		check.GET("/health", health.Health)
 	}
 
-	account := engine.Group("/v1/account")
-	{
-
-		account.GET("", AccountHandler.ListAccount)              // 获取用户列表
-		account.GET("/:account_name", AccountHandler.GetAccount) // 获取指定用户的详细信息
-		account.POST("", AccountHandler.AccountCreate)           //新增用户
-		account.DELETE("/:id", AccountHandler.Delete)            // 删除用户
-		account.PUT("/", AccountHandler.Update)                  // 更新用户
-		account.POST("/login", AccountHandler.Login)             //登录
-		account.POST("/wxlogin", AccountHandler.WXLogin)
-
-	}
-
 	dp := engine.Group("/v1/dp")
 	{
 

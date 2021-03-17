@@ -40,7 +40,9 @@ func main() {
 func Free() {
 	fmt.Println("如果今天有过生日的人，会说出一个数字，这个数字如果和我们的一致，则这顿饭免单")
 	secret := rand.Intn(100)
+	//secret := 87
 	ctx, cancelFunc := context.WithCancel(context.Background())
+	defer cancelFunc()
 	for i := 1; i <= 3; i++ {
 		var num int32
 		r := rand.Intn(100)
@@ -49,13 +51,13 @@ func Free() {
 		go choose(func() {
 			if atomic.LoadInt32(&num) == int32(secret) {
 				fmt.Println("猜对了，给您免单")
-				cancelFunc()
 			}
 		})
 	}
 	go func() {
 		<-ctx.Done()
 	}()
+	time.Sleep(3*time.Second)
 	fmt.Println("答案是" + strconv.Itoa(secret))
 	fmt.Println("感谢光临，聚餐结束。")
 }
