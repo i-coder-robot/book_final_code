@@ -12,8 +12,8 @@ type Honor struct {
 type Chef struct {
 	Name    string //名称
 	Age     int    //年龄
-	Honor         //荣誉
-	Trainee *Chef //徒弟，这里为了演示，可以认为徒弟有多个，用切片表示
+	Honor          //荣誉
+	Trainee *Chef  //徒弟，这里为了演示，可以认为徒弟有多个，用切片表示
 }
 
 func (c *Chef) Cook(name string) string {
@@ -27,7 +27,7 @@ func main() {
 	li := &Chef{
 		Name:    "李师傅",
 		Age:     25,
-		Honor:  Honor{},
+		Honor:   Honor{},
 		Trainee: nil,
 	}
 	result := li.Cook("红烧肉")
@@ -38,7 +38,7 @@ func main() {
 	li2 := Chef{
 		Name:    "李师傅",
 		Age:     25,
-		Honor:  Honor{},
+		Honor:   Honor{},
 		Trainee: nil,
 	}
 	liPoint := &li2
@@ -50,7 +50,7 @@ func main() {
 	li3 := Chef{
 		Name:    "李师傅",
 		Age:     25,
-		Honor:  Honor{},
+		Honor:   Honor{},
 		Trainee: nil,
 	}
 

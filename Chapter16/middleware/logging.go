@@ -20,7 +20,7 @@ func Logging() gin.HandlerFunc {
 		path := context.Request.URL.Path
 
 		reqUrl := context.Request.URL.Path
-		if strings.Contains(reqUrl,"image") {
+		if strings.Contains(reqUrl, "image") {
 			//context.Next()
 			return
 		}

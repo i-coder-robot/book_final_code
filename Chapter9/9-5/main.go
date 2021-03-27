@@ -32,7 +32,6 @@ func (c Chef) Hidden(b bool) string {
 	return ""
 }
 
-
 func (c Chef) GetHonor() string {
 	return c.Honor
 }
@@ -48,15 +47,16 @@ func main() {
 		Name: "李师傅",
 		Age:  28,
 	}
-	WorkForDinner(&li,"红烧肉")
-	zhang:=Chef{
+	WorkForDinner(&li, "红烧肉")
+	zhang := Chef{
 		Name: "张师傅",
 		Age:  25,
 	}
-	WorkForDinner(&zhang,"盐焗鸡")
+	WorkForDinner(&zhang, "盐焗鸡")
 
 	var ci ChefInterface
-	fmt.Printf("%T\n",ci)
-	ci=new(Chef)
-	fmt.Printf("%T\n",ci)
+	fmt.Printf("%T\n", ci)
+	fmt.Println(ci == nil)
+	ci = new(Chef)
+	fmt.Printf("%T\n", ci)
 }

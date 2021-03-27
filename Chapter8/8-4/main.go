@@ -18,6 +18,10 @@ type Honor struct {
 	GetTime time.Time //获奖时间
 }
 
+func Cook(c Chef, name string) string {
+	return c.Name + "：做好了 " + name
+}
+
 func (c Chef) Cook(name string) string {
 	return c.Name + "：做好了 " + name
 }
@@ -27,10 +31,15 @@ func (c Chef) FavCook(name string) string {
 }
 
 func main() {
+
 	c := Chef{
 		Name: "老王",
 		Age:  28,
 	}
+
+	resultFunc := Cook(c, "锅包肉")
+	fmt.Println(resultFunc)
+
 	marshal, err := json.Marshal(&c)
 	if err != nil {
 		fmt.Println(err)

@@ -30,7 +30,7 @@ func (c *Config) initConfig() error {
 	if c.Name != "" {
 		viper.SetConfigFile(c.Name) // 如果指定了配置文件，则解析指定的配置文件
 	} else {
-		viper.AddConfigPath("./conf/")   	//命令行的配置
+		viper.AddConfigPath("./conf/") //命令行的配置
 		viper.SetConfigName("config")
 	}
 	viper.SetConfigType("yaml")                  // 设置配置文件格式为YAML

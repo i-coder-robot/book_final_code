@@ -11,8 +11,8 @@ type IFly interface {
 type Bird struct {
 	Name string
 }
-func (b *Bird) Fly() {}
 
+func (b *Bird) Fly() {}
 
 func main() {
 	bird := &Bird{}

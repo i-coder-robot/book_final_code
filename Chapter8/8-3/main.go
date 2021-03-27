@@ -8,7 +8,7 @@ import (
 type Chef struct {
 	Name    string //名称
 	Age     int    //年龄
-	*Honor          //荣誉
+	*Honor         //荣誉
 	Trainee *Chef  //徒弟,这里为了演示，可以认为徒弟有多个，用切片表示
 }
 
@@ -17,19 +17,13 @@ type Honor struct {
 	GetTime time.Time //获奖时间
 }
 
-func main() {
-	t:= struct {}{}
-	fmt.Println(t)
-
-	li := Chef{
-		Name:    "李师傅",
-		Age:     25,
-		Honor:   &Honor{},
-		Trainee: nil,
+func ShowName(names []string) {
+	for _, name := range names {
+		fmt.Println("这是：" + name)
 	}
-	li.Title = "中华金厨奖"
-	fmt.Println(li.Name)
+}
 
+func main() {
 	chef := struct {
 		Name string
 		Age  int
@@ -38,4 +32,10 @@ func main() {
 		Age:  30,
 	}
 	fmt.Println(chef)
+
+	list := []string{
+		"红烧肉", "清蒸鱼", "熘大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	ShowName(list)
+
 }

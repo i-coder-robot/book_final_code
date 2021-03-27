@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-type T struct {}
+type T struct{}
 
 func (t *T) GoodDinner() {
 	fmt.Println("吃顿好的。")

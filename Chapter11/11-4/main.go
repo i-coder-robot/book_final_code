@@ -7,18 +7,17 @@ import (
 
 func main() {
 	var num1 uint64
-	atomic.AddUint64(&num1,70)
+	atomic.AddUint64(&num1, 70)
 	fmt.Println(num1)
 	atomic.AddUint64(&num1, ^uint64(23))
 	fmt.Println(num1)
 
-
 	var num2 uint64
 	num2 = 5
-	ok := atomic.CompareAndSwapUint64(&num2,5, 50)
+	ok := atomic.CompareAndSwapUint64(&num2, 5, 50)
 	fmt.Println(ok)
 	fmt.Println(num2)
-	ok = atomic.CompareAndSwapUint64(&num2,40, 50)
+	ok = atomic.CompareAndSwapUint64(&num2, 40, 50)
 	fmt.Println(ok)
 	fmt.Println(num2)
 

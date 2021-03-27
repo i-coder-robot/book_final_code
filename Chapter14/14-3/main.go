@@ -17,5 +17,5 @@ func main() {
 }
 
 func (t *T) GoodDinner(a int, b string) {
-	fmt.Println("吃顿好的，" + b, a)
+	fmt.Println("吃顿好的，"+b, a)
 }

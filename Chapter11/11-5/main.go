@@ -29,7 +29,7 @@ func main() {
 	fmt.Println("所有人到齐了，可以点菜了!")
 
 	var once sync.Once
-	for i:=0;i<5;i++{
+	for i := 0; i < 5; i++ {
 		once.Do(func() {
 			fmt.Println("春节快乐。")
 		})

@@ -21,7 +21,6 @@ func main() {
 			sendCond.Wait()
 		}
 		buySth = "已投递"
-
 		box.Unlock()
 		recvCond.Signal()
 	}()

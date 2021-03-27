@@ -6,7 +6,7 @@ import (
 )
 
 type Person struct {
-	Age int    `json:"NewAge"`
+	Age  int    `json:"NewAge"`
 	Name string `json:"NewName"`
 }
 type newPerson struct {
@@ -14,10 +14,9 @@ type newPerson struct {
 	NewName string
 }
 
-
 func main() {
 	t := Person{
-		Age: 23,
+		Age:  23,
 		Name: "小明",
 	}
 	refType := reflect.TypeOf(t)

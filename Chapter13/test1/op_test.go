@@ -7,14 +7,13 @@ import (
 )
 
 func TestSum(t *testing.T) {
-	result:=Sum()
+	result := Sum()
 	fmt.Println(result)
-	assert.Equal(t,result,45)
+	assert.Equal(t, result, 45)
 }
 
 func BenchmarkSum(b *testing.B) {
-	for i:=0;i<100;i++{
+	for i := 0; i < 100; i++ {
 		Sum()
 	}
 }
-

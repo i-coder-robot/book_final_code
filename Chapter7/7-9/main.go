@@ -2,15 +2,9 @@ package main
 
 import "fmt"
 
-func Total(prices ...int) int{
-	result:=0
-	for _,val:=range prices {
-		result+=val
-	}
-	return result
-}
-
-
 func main() {
-	fmt.Println(Total(88,98,128,198,68))
+
+	foods := []string{"红烧肉", "清蒸鱼", "熘大虾", "蒸螃蟹", "鲍鱼粥"}
+
+	fmt.Printf("%s", foods[5])
 }
