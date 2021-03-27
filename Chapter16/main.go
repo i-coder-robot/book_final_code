@@ -15,7 +15,6 @@ import (
 
 var (
 	cfg                  = flag.String("config", "", "")
-	AccountHandler       handler.AccountHandler
 	DiscountHandler      handler.DiscountHandler
 	RestaurantNavHandler handler.RestaurantNavHandler
 	HotelDetailHandler   handler.HotelDetailHandler

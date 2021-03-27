@@ -9,6 +9,12 @@ type TeamPostOrderRepo struct {
 }
 
 func (t *TeamPostOrderRepo) Save(order model.TeamPostOrder) string {
-	t.DB.MyDB.Save(order)
+	tx:=t.DB.MyDB.Begin()
+	defer tx.Rollback()
+	//err := tx.Save(order).Error
+	err := tx.Create(order).Error
+	if err==nil{
+		tx.Commit()
+	}
 	return order.TeamPostOrderId
 }

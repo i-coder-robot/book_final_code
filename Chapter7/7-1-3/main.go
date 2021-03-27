@@ -8,4 +8,5 @@ func Desc(foodType string, foodName string) {
 
 func main() {
 	Desc("卤菜", "葱烧海参")
+	Desc("川菜","麻婆豆腐")
 }
