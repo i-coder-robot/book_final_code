@@ -2,6 +2,7 @@ package config
 
 import (
 	"github.com/fsnotify/fsnotify"
+	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
 	"github.com/spf13/viper"
 	"log"
 )
@@ -17,6 +18,7 @@ func Init(name string) error {
 
 	// 初始化配置文件
 	if err := c.initConfig(); err != nil {
+		MyLog.Log.Error(err)
 		return err
 	}
 
