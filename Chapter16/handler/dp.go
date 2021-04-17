@@ -90,6 +90,7 @@ func (h *HotelDetailHandler) HotelDetailHandler(c *gin.Context) {
 	hotelId := c.Param("id")
 
 	hotel, err := h.Srv.GetHotelDetailByID(hotelId)
+	//TODO 直接记录错误日志
 	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"item": nil,
