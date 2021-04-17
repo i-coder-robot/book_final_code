@@ -32,10 +32,16 @@ Out:
 		fmt.Println(i)
 	}
 
-	foods2 := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"}
+	//foods2 := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
+	foods2 := []string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "鲍鱼粥"}
 	for i, item := range foods2 {
+		if i == len(foods2) {
+			item = "蒜蓉粉丝扇贝"
+		}
 		result := fmt.Sprintf("%d--%q", i, item)
 		fmt.Println(result)
 	}
+
+	fmt.Println(foods2)
 
 }
